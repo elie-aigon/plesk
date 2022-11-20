@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+html{
+    overflow-x: hidden;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: left right,
+    grid-column-;
+    width: 1200px;
+    margin: 100px auto;
+}
+.right{
+    grid-area: right;
+    background-color: white;
+    grid-column: 2/2;
+    grid-row: 1/1;
+    justify-self: right;
+    
+}
+footer{
+   background-color: #4472C4;
+   width: 200%;
+   font-size: 500%;
+
+   
+}
+footer p{
+    
+    color: white;
+  padding-right: 2em;                   /* un peu d'espace pour la transition */
+  white-space: nowrap;                  /* pas de passage à la ligne */
+  animation: defilement-rtl  30s infinite linear;
+}
+
+@keyframes defilement-rtl {
+    0% {
+      transform: translate3d(0,0,0);      /* position initiale à droite */
+    }
+    100% {
+      transform: translate3d(-100%,0,0);  /* position finale à gauche */
+    }
+}
+
+.left{
+    grid-area: left;
+    justify-self: center;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    color: white;
+    background-color: #4472C4;
+    grid-column: 1/1;
+    grid-row: 1/1;
+    padding-left: 50px;
+}
+h2{
+    text-decoration: underline;
+}
+h1{
+    text-decoration: underline;
+}
+
+.bluetext{
+    color: #4472C4;
+}
+a{
+    color: white;
+}
